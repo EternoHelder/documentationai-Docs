@@ -1,0 +1,167 @@
+---
+title: Changelog
+description: Version history, recent updates, and release notes for Jostter Marinho.
+---
+
+## Recent Releases
+
+Stay updated with the latest improvements to Jostter Marinho. Check the tags on each release to identify breaking changes, new features, and fixes.
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Added real-time collaboration for shared documents with live cursors and conflict resolution.
+- Introduced webhook support for custom integrations at `https://your-webhook-url.com/webhook`.
+- New dashboard analytics with export to CSV and PDF.
+
+## Improvements
+
+- Enhanced search performance by `>50%` for large documentation spaces.
+- Better mobile responsiveness with touch-optimized navigation.
+
+## Bug Fixes
+
+- Fixed authentication token refresh issues during long sessions.
+- Resolved file upload errors for files `>100MB`.
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Custom themes and branding with CSS variables, including your brand color `#ff6b1a`.
+- Version history for documents with diff views and restore points.
+- API endpoints for programmatic document management at `https://api.example.com/v1/docs`.
+
+## Improvements
+
+- Faster page loads using lazy loading for images and embeds.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["breaking", "feature"]}>
+
+## Initial Release
+
+- Core documentation workspace with folders, search, and markdown editor.
+- User management and role-based access control.
+- Basic API for CRUD operations on documents.
+
+## Breaking Changes
+
+- Initial schema changes require database migration.
+
+</Update>
+
+## Upgrading Jostter Marinho
+
+<Callout kind="info">
+  Always back up your data before upgrading. Review breaking changes in each release above.
+</Callout>
+
+Follow these steps to upgrade smoothly.
+
+<Steps>
+  <Step title="Check Compatibility" icon="shield">
+
+    Verify your current version and review migration notes.
+
+  </Step>
+  <Step title="Backup Data" icon="download">
+
+    Export your documentation space via the dashboard at `https://dashboard.example.com/export`.
+
+  </Step>
+  <Step title="Run Migration" icon="settings">
+
+    <CodeGroup tabs="Docker,CLI">
+      ```bash
+      docker pull josttermarinho:latest
+      docker run --env API_KEY=YOUR_API_KEY josttermarinho:latest migrate
+      ```
+      ```bash
+      npm install -g @jostter/cli
+      jostter migrate --api-key YOUR_API_KEY
+      ```
+    </CodeGroup>
+
+  </Step>
+  <Step title="Restart Services" icon="refresh-cw">
+
+    Restart your instance and test core features.
+
+  </Step>
+</Steps>
+
+## Breaking Changes Examples
+
+For v1.2.0, update your configuration to use the new auth format.
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+  // Old
+  const config = { auth: { token: 'old-token' } };
+
+  // New
+  const config = { 
+    auth: { 
+      type: 'bearer', 
+      token: `YOUR_TOKEN` 
+    } 
+  };
+  ```
+  ```python
+  # Old
+  config = {'auth': {'token': 'old-token'}}
+
+  # New
+  config = {
+      'auth': {
+          'type': 'bearer',
+          'token': 'YOUR_TOKEN'
+      }
+  }
+  ```
+</CodeGroup>
+
+## Migration Guides
+
+<ExpandableGroup>
+  <Expandable title="From v1.0 to v1.1" default-open="true">
+    Update document schemas and reindex search.
+
+    ```bash
+    jostter migrate-v1.1 --force
+    ```
+  </Expandable>
+  <Expandable title="From v1.1 to v1.2">
+    Handle webhook schema changes.
+
+    <ParamField header="X-Webhook-Signature" param-type="string" required="true">
+      HMAC signature for payload verification.
+    </ParamField>
+  </Expandable>
+</ExpandableGroup>
+
+## Roadmap
+
+Track upcoming features.
+
+<Board title="Upcoming Releases">
+  <BoardColumn title="Planned" color="0" icon="calendar">
+    <BoardCard title="AI Assistant" description="Auto-generate docs from prompts" icon="bot" dueDate="2024-12-01" />
+    <BoardCard title="Git Sync" description="Bidirectional sync with GitHub" icon="git-branch" />
+  </BoardColumn>
+  <BoardColumn title="In Progress" color="1" icon="loader-2">
+    <BoardCard title="Advanced Permissions" description="Granular role controls" icon="shield" author="Engineering" />
+  </BoardColumn>
+  <BoardColumn title="Next" color="2" icon="package">
+    <BoardCard title="SDK Release" description="Client libraries for JS/Python" icon="code" createdAt="2024-11-01" />
+  </BoardColumn>
+</Board>
+
+<Callout kind="tip" icon="book-open">
+  Customize this changelog with your real release notes. Links to [Quickstart](/quickstart) for new users.
+</Callout>

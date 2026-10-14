@@ -1,0 +1,126 @@
+---
+title: Quickstart
+description: Step-by-step guide to sign up, create your first documentation space, and publish your initial docs in under 5 minutes.
+---
+
+## Prerequisites
+
+Before you begin, ensure you have:
+
+<Callout kind="info">
+
+- A modern web browser like Chrome, Firefox, or Safari
+- An email address for account verification
+- No prior setup required - everything runs in your browser
+
+</Callout>
+
+## Sign Up and Create Your First Space
+
+Follow these steps to get your documentation live in minutes. Jostter Marinho handles hosting, editing, and publishing automatically.
+
+<Steps>
+  <Step title="Create Account" icon="user-plus">
+
+    Visit [https://josttermarinho.com](https://josttermarinho.com) and click **Sign Up**.
+
+    Choose your preferred method:
+
+    <Tabs>
+      <Tab title="Email" icon="mail">
+
+        Enter your email and create a password. Verify your email via the link sent to your inbox.
+
+      </Tab>
+      <Tab title="Google" icon="apple">
+
+        Click **Continue with Google** and authorize the app.
+
+      </Tab>
+    </Tabs>
+
+  </Step>
+  <Step title="Create Documentation Space" icon="folder-plus">
+
+    After signing in, click **New Space** on the dashboard.
+
+    Enter a name like `My Project Docs` and select a starter template (e.g., "Blank" or "API Docs").
+
+    Click **Create**. Your space appears in the sidebar at `https://app.josttermarinho.com/spaces/my-project-docs`.
+
+  </Step>
+  <Step title="Add and Edit First Page" icon="edit-3">
+
+    In your space, click **+ New Page** and name it `introduction.mdx`.
+
+    Jostter Marinho uses MDX for rich docs. Paste this starter content:
+
+````mdx
+```
+---
+title: Introduction
+description: Welcome to my docs
+---
+
+## Hello World
+
+Your first page is live!
+```
+````
+
+    Use the visual editor or switch to **Source** mode for advanced tweaks.
+
+  </Step>
+  <Step title="Preview and Publish" icon="eye">
+
+    Click **Preview** to see the rendered page.
+
+    Make edits live with **Publish**. Share the URL: `https://josttermarinho.com/my-project-docs/introduction`.
+
+    Changes auto-save and deploy instantly.
+
+  </Step>
+</Steps>
+
+<Callout kind="success">
+
+Congratulations! Your first documentation page is published. It takes under 5 minutes.
+
+</Callout>
+
+## Customize Your Docs
+
+Enhance your space with these features:
+
+<Columns cols={2}>
+  <Card title="Add Navigation" icon="menu" href="/docs/navigation">
+    Organize pages with sidebar menus and search.
+  </Card>
+  <Card title="Embed Components" icon="code" href="/docs/components">
+    Use cards, tabs, and diagrams in MDX.
+  </Card>
+  <Card title="Team Collaboration" icon="users" href="/docs/collaboration">
+    Invite members and set permissions.
+  </Card>
+  <Card title="Custom Domains" icon="globe" href="/docs/domains">
+    Connect your domain for branded docs.
+  </Card>
+</Columns>
+
+## Common Next Steps
+
+```javascript
+// Example: Add a custom theme in your space settings
+const theme = {
+  primaryColor: '#ff6b1a',  // Jostter Marinho orange
+  font: 'Inter'
+};
+```
+
+Explore [spaces overview](/docs/spaces) or check the [full component library](/docs/components) to build advanced docs.
+
+<Expandable title="Troubleshooting" default-open="false">
+  - **Page not publishing?** Check for MDX syntax errors in the source editor.
+  - **Slow preview?** Clear browser cache or try incognito mode.
+  - Need help? Contact support@josttermarinho.com.
+</Expandable>

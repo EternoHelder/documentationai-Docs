@@ -1,0 +1,123 @@
+{
+  "name": "Jostter Marinho",
+  "colors": {
+    "light": {
+      "brand": "#ff6b1a"
+    },
+    "dark": {
+      "brand": "#FB9E6A"
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "icon": "book",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "icon": "rocket",
+            "pages": [
+              {
+                "title": "Introduction",
+                "path": "introduction",
+                "icon": "home"
+              },
+              {
+                "title": "Quick Start",
+                "path": "quickstart",
+                "icon": "zap"
+              }
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "icon": "layers",
+            "pages": [
+              {
+                "title": "Concepts",
+                "path": "concepts",
+                "icon": "book-open"
+              },
+              {
+                "title": "Features",
+                "path": "features",
+                "icon": "star"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "icon": "code",
+        "groups": [
+          {
+            "group": "Endpoints",
+            "icon": "terminal",
+            "openapi": "api-reference/openapi.yaml",
+            "pages": []
+          }
+        ]
+      },
+      {
+        "tab": "Help Center",
+        "icon": "help-circle",
+        "pages": [
+          {
+            "title": "Help Center",
+            "path": "help-center",
+            "icon": "home"
+          },
+          {
+            "group": "FAQs",
+            "icon": "help-circle",
+            "expandable": false,
+            "pages": [
+              {
+                "title": "Getting Started",
+                "path": "help-center/faq/getting-started",
+                "icon": "help-circle"
+              }
+            ]
+          },
+          {
+            "group": "Troubleshooting",
+            "icon": "alert-triangle",
+            "expandable": false,
+            "pages": [
+              {
+                "title": "Cannot Access Dashboard",
+                "path": "help-center/troubleshooting/cannot-access-dashboard",
+                "icon": "alert-circle"
+              }
+            ]
+          },
+          {
+            "group": "Guides",
+            "icon": "book-open",
+            "expandable": false,
+            "pages": [
+              {
+                "title": "Organize Docs",
+                "path": "help-center/guides/organize-docs",
+                "icon": "book-open"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Changelog",
+        "icon": "clock",
+        "pages": [
+          {
+            "title": "Release History",
+            "path": "changelog",
+            "icon": "history"
+          }
+        ]
+      }
+    ]
+  }
+}
